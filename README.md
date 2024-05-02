@@ -18,6 +18,7 @@ This project demonstrates setting up proxy servers in [Rest Proxy Servers](https
 Run the scraper using Cargo:
 ```bash
 cargo run
+```
 
 ## Dependencies
 This project utilizes several external libraries to function effectively. Below are the key dependencies:
