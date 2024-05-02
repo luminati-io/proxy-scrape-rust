@@ -6,14 +6,10 @@ Basic API Rust program demonstrating using web scraping over proxy servers
 This project demonstrates setting up proxy servers in [Web Scraping in Rust](https://brightdata.com/blog/how-tos/web-scraping-with-rust), Proxies protect your digital identity during web scraping by using their IP address, circumventing IP bans and geoblocking.
 
 This repository contains different programs to run based on the [Rust Proxy Servers](https://brightdata.com/blog/how-tos/rust-proxy-servers) article:
-### basic
-Shows basic usage of getting data and parsing it
-### basic_proxy
-Shows how to use basic proxies to scrape data (requires setting up nginx server and updating its configuration with [nginx.conf](nginx.conf) file)
-### rotating_proxy
-Shows how to use rotating proxies to scrape data (requires setting up nginx server and updating its configuration with [nginx.conf](nginx.conf) file)
-### brightdata_proxy
-Shows how to use Bright Data proxies to scrape data (requires [Bright Data proxy configuration](#bright-data-proxy-configuration))
+- basic: Shows basic usage of getting data and parsing it
+- basic_proxy: Shows how to use basic proxies to scrape data (requires setting up nginx server and updating its configuration with [nginx.conf](nginx.conf) file)
+- rotating_proxy: Shows how to use rotating proxies to scrape data (requires setting up nginx server and updating its configuration with [nginx.conf](nginx.conf) file)
+- brightdata_proxy: Shows how to use Bright Data proxies to scrape data (requires [Bright Data proxy configuration](#bright-data-proxy-configuration))
 
 ## Prerequisites
 - Rust and Cargo (Installation guide: [Rustup](https://rustup.rs/))
