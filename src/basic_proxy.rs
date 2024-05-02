@@ -5,8 +5,10 @@ use std::error::Error;
 async fn main()  -> Result<(), Box<dyn Error>>{
     let url = "http://books.toscrape.com/";
 
-    // this is the same as the basic example
-    let client = reqwest::Client::new();
+    // This replaces the basic example reqwest client in order to use a local proxy
+    let client = reqwest::Client::builder()
+    .proxy(reqwest::Proxy::https("http://localhost:8080")?)
+    .build()?;
 
     let response = client
         .get(url)

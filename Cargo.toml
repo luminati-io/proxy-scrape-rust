@@ -3,9 +3,24 @@ name = "rust-scraper"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 reqwest = "0.11"
 tokio = {version = "1", features = ["rt-multi-thread", "net", "macros"]}
 scraper = "0.13"
+rand = "0.8.5"
+
+[[bin]]
+name = "basic"
+path = "src/basic.rs"
+
+[[bin]]
+name = "basic_proxy"
+path = "src/basic_proxy.rs"
+
+[[bin]]
+name = "rotating_proxy"
+path = "src/rotating_proxy.rs"
+
+[[bin]]
+name = "brightdata_proxy"
+path = "src/brightdata_proxy.rs"

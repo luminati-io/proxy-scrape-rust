@@ -5,7 +5,6 @@ use std::error::Error;
 async fn main()  -> Result<(), Box<dyn Error>>{
     let url = "http://books.toscrape.com/";
 
-    // this is the same as the basic example
     let client = reqwest::Client::new();
 
     let response = client

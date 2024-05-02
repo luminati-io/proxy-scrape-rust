@@ -5,8 +5,11 @@ use std::error::Error;
 async fn main()  -> Result<(), Box<dyn Error>>{
     let url = "http://books.toscrape.com/";
 
-    // this is the same as the basic example
-    let client = reqwest::Client::new();
+    // Update the following block with the details from the Bright Data proxy details page
+    let client = reqwest::Client::builder()
+    .proxy(reqwest::Proxy::http("<BD proxy hostname & port>")?
+    .basic_auth("<your BD username>", "<your BD password>"))
+    .build()?;
 
     let response = client
         .get(url)

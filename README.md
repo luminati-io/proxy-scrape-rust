@@ -3,7 +3,17 @@
 # proxy-scrape-rust
 Basic API Rust program demonstrating using web scraping over proxy servers
 
-This project demonstrates setting up proxy servers in [Rest Proxy Servers](https://brightdata.com/blog/how-tos/rust-proxy-servers), Proxies protect your digital identity during web scraping by using their IP address, circumventing IP bans and geoblocking.
+This project demonstrates setting up proxy servers in [Web Scraping in Rust](https://brightdata.com/blog/how-tos/web-scraping-with-rust), Proxies protect your digital identity during web scraping by using their IP address, circumventing IP bans and geoblocking.
+
+This repository contains different programs to run based on the [Rust Proxy Servers](https://brightdata.com/blog/how-tos/rust-proxy-servers) article:
+### basic
+Shows basic usage of getting data and parsing it
+### basic_proxy
+Shows how to use basic proxies to scrape data (requires setting up nginx server and updating its configuration with [nginx.conf](nginx.conf) file)
+### rotating_proxy
+Shows how to use rotating proxies to scrape data (requires setting up nginx server and updating its configuration with [nginx.conf](nginx.conf) file)
+### brightdata_proxy
+Shows how to use Bright Data proxies to scrape data (requires [Bright Data proxy configuration](#bright-data-proxy-configuration))
 
 ## Prerequisites
 - Rust and Cargo (Installation guide: [Rustup](https://rustup.rs/))
@@ -19,7 +29,10 @@ Run the scraper using Cargo:
 ```bash
 cargo run
 ```
-
+or one of the 
+```bash
+cargo run --bin (basic|basic_proxy|rotating_proxy|brightdata_proxy)
+```
 ## Dependencies
 This project utilizes several external libraries to function effectively. Below are the key dependencies:
 
@@ -33,3 +46,12 @@ This project utilizes several external libraries to function effectively. Below 
 [Tokio](https://crates.io/crates/tokio) is an event-driven, non-blocking I/O platform for writing asynchronous applications with Rust. It is built on the Rust's async/await feature, making it straightforward to write scalable and high-performance applications. Tokio is critical for managing asynchronous tasks and timers, especially when dealing with concurrent operations in network services.
 
 For more information and examples on how to use these dependencies, please refer to their respective documentation.
+
+## Bright Data proxy configuration
+To run the project, make sure you have a valid proxy server. You can obtain proxy server details from a provider like [Bright Data](https://brightdata.com/). Once you have the proxy server details, update the `main.rs` file with the appropriate proxy configuration.
+
+## Contributing
+Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
